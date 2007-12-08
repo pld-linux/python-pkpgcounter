@@ -4,7 +4,7 @@ Summary:	Page Description Language parser
 Summary(pl.UTF-8):	Parser języka opisu strony
 Name:		python-%{module}
 Version:	3.40
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Development/Languages/Python
 Source0:	http://www.pykota.com/software/pkpgcounter/download/tarballs/%{module}-%{version}.tar.gz
@@ -12,6 +12,7 @@ Source0:	http://www.pykota.com/software/pkpgcounter/download/tarballs/%{module}-
 URL:		http://www.pykota.com/software/pkpgcounter/
 BuildRequires:	python >= 1:2.5
 BuildRequires:	python-devel >= 1:2.5
+BuildRequires:	python-PIL
 %pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
