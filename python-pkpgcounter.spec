@@ -1,7 +1,7 @@
 %define		module	pkpgcounter
 
 Summary:	Page Description Language parser
-Summary(pl.UTF-8):	Parser języka opisu strony
+Summary(pl.UTF-8):	Analizator języka opisu strony
 Name:		python-%{module}
 Version:	3.40
 Release:	2
@@ -13,7 +13,9 @@ URL:		http://www.pykota.com/software/pkpgcounter/
 BuildRequires:	python >= 1:2.5
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	python-PIL
+BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -22,7 +24,7 @@ can either count the number of pages or compute the percent of
 ink coverage needed to print various types of documents.
 
 %description -l pl.UTF-8
-pkpgcounter jest ogólnym parserem języka opisu strony który
+pkpgcounter jest ogólnym analizatorem języka opisu strony, który
 potrafi policzyć liczbę stron albo procentowe pokrycie atramentem
 potrzebne do wydrukowania różnych typów dokumentów.
 
@@ -30,12 +32,12 @@ potrzebne do wydrukowania różnych typów dokumentów.
 %setup -q -n %{module}-%{version}
 
 %build
-python setup.py build
+%{__python} setup.py build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-python setup.py install \
+%{__python} setup.py install \
 	--root=$RPM_BUILD_ROOT \
 	--optimize=2
 
