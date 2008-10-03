@@ -4,7 +4,7 @@ Summary:	Page Description Language parser
 Summary(pl.UTF-8):	Analizator języka opisu strony
 Name:		python-%{module}
 Version:	3.40
-Release:	2
+Release:	3
 License:	LGPL
 Group:		Development/Languages/Python
 Source0:	http://www.pykota.com/software/pkpgcounter/download/tarballs/%{module}-%{version}.tar.gz
