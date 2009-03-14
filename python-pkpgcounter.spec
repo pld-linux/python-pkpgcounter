@@ -3,12 +3,12 @@
 Summary:	Page Description Language parser
 Summary(pl.UTF-8):	Analizator języka opisu strony
 Name:		python-%{module}
-Version:	3.40
-Release:	3
+Version:	3.50
+Release:	1
 License:	LGPL
 Group:		Development/Languages/Python
 Source0:	http://www.pykota.com/software/pkpgcounter/download/tarballs/%{module}-%{version}.tar.gz
-# Source0-md5:	8dc8760db85857052ba8166fee539b8a
+# Source0-md5:	564dd96e8a5433564c2e39319e65217e
 URL:		http://www.pykota.com/software/pkpgcounter/
 BuildRequires:	python >= 1:2.5
 BuildRequires:	python-devel >= 1:2.5
@@ -42,6 +42,9 @@ rm -rf $RPM_BUILD_ROOT
 	--optimize=2
 
 %py_postclean
+
+# we already have these files in %doc
+rm -fr $RPM_BUILD_ROOT%{_docdir}/%{module}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
