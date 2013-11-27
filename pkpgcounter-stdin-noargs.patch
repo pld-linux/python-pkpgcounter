@@ -1,0 +1,11 @@
+--- pkpgcounter-3.50/pkpgpdls/analyzer.py~	2013-11-27 13:44:25.294545999 +0100
++++ pkpgcounter-3.50/pkpgpdls/analyzer.py	2013-11-27 14:00:38.057131007 +0100
+@@ -225,7 +225,7 @@
+         sys.stderr.write("ERROR: the argument to the --resolution command line option must be between 72 and 1200.\n")
+         sys.stderr.flush()
+     else :
+-        if (not arguments) or ((not sys.stdin.isatty()) and ("-" not in arguments)) :
++        if (not arguments) :
+             arguments.append("-")
+         totalsize = 0    
+         lines = []

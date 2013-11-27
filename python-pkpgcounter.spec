@@ -10,6 +10,7 @@ Group:		Development/Languages/Python
 Source0:	http://www.pykota.com/software/pkpgcounter/download/tarballs/%{module}-%{version}.tar.gz
 # Source0-md5:	564dd96e8a5433564c2e39319e65217e
 Patch0:		pkpgcounter-postscript-multiple-copies.patch
+Patch1:		pkpgcounter-stdin-noargs.patch
 URL:		http://www.pykota.com/software/pkpgcounter/
 BuildRequires:	python >= 1:2.5
 BuildRequires:	python-devel >= 1:2.5
@@ -32,6 +33,7 @@ potrzebne do wydrukowania różnych typów dokumentów.
 %prep
 %setup -q -n %{module}-%{version}
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__python} setup.py build
