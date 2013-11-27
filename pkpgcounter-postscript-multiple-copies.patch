@@ -1,0 +1,12 @@
+diff -up pkpgcounter-3.50/pkpgpdls/postscript.py.multiple_copies pkpgcounter-3.50/pkpgpdls/postscript.py
+--- pkpgcounter-3.50/pkpgpdls/postscript.py.multiple_copies	2007-12-09 15:26:22.000000000 +0100
++++ pkpgcounter-3.50/pkpgpdls/postscript.py	2012-09-01 07:05:06.000000000 +0200
+@@ -101,7 +101,7 @@ class Parser(pdlparser.PDLParser) :
+                     notinteger = 1 # It seems that sometimes it's not an integer but an EPS file name
+                 else :    
+                     notinteger = 0
+-                    if newpagenum == oldpagenum :
++                    if newpagenum <= oldpagenum :
+                         proceed = 0
+                     else :
+                         oldpagenum = newpagenum
