@@ -12,6 +12,7 @@ Source0:	http://www.pykota.com/software/pkpgcounter/download/tarballs/%{module}-
 Patch0:		pkpgcounter-postscript-multiple-copies.patch
 Patch1:		pkpgcounter-stdin-noargs.patch
 URL:		http://www.pykota.com/software/pkpgcounter/
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	python >= 1:2.5
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	python-PIL
